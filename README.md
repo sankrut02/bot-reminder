@@ -2,6 +2,10 @@
 
 A Python automation bot that updates WhatsApp group names with countdown timers and sends daily reminders for upcoming trips.
 
+[![GitHub](https://img.shields.io/badge/GitHub-sankrut02%2Fbot--reminder-blue?logo=github)](https://github.com/sankrut02/bot-reminder)
+[![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python)](https://www.python.org/)
+[![Selenium](https://img.shields.io/badge/Selenium-WebDriver-green?logo=selenium)](https://selenium-python.readthedocs.io/)
+
 ## 📋 Features
 
 - **Automated Group Name Updates**: Changes WhatsApp group name to show days remaining until trip
@@ -30,8 +34,8 @@ pip install selenium
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
-   cd bot
+   git clone https://github.com/sankrut02/bot-reminder.git
+   cd bot-reminder
    ```
 
 2. **Download ChromeDriver**:
@@ -54,31 +58,19 @@ pip install selenium
 
 ## 🚀 Usage
 
-### Main Bot (`imp.py`)
-The primary bot file that runs the countdown automation:
+Run the main bot:
 
 ```bash
-python imp.py
+python bot_reminder.py
 ```
 
-### Testing/Development (`ha.py`)
-A utility script to check trip calculations:
+The bot will:
+- Open Chrome with WhatsApp Web
+- Wait for you to scan QR code (first time only)
+- Monitor the time and update group daily at specified time
+- Continue running until trip date is reached
 
-```bash
-python ha.py
-```
 
-## 📁 File Structure
-
-```
-bot/
-├── imp.py              # Main bot script
-├── ha.py              # Trip date calculator/tester
-├── chromedriver       # Chrome WebDriver executable
-├── chrome-data/       # Chrome user data (auto-generated)
-├── README.md          # This file
-└── .git/             # Git repository
-```
 
 ## 🔧 Configuration Options
 
@@ -102,6 +94,7 @@ Edit these in the `update_group()` function to customize your messages.
 - **Chrome Data**: The bot stores browser session data in `chrome-data/` directory
 - **WhatsApp Session**: Your WhatsApp Web login is persisted between runs
 - **Add to .gitignore**: Consider adding `chrome-data/` to `.gitignore` for privacy
+- **Repository**: This is a public repository - don't commit sensitive data!
 
 ### Limitations
 - **UI Dependencies**: Uses XPath selectors that may break if WhatsApp updates their interface
@@ -136,6 +129,14 @@ Feel free to fork this project and submit pull requests for improvements:
 
 This project is for educational purposes. Please use responsibly and in accordance with WhatsApp's Terms of Service.
 
+## 🔗 Repository
+
+**GitHub**: [sankrut02/bot-reminder](https://github.com/sankrut02/bot-reminder)
+
+## 👨‍💻 Author
+
+Created by [sankrut02](https://github.com/sankrut02)
+
 ## ⚡ Quick Start
 
 1. Install dependencies: `pip install selenium`
@@ -144,6 +145,13 @@ This project is for educational purposes. Please use responsibly and in accordan
 4. Run: `python imp.py`
 5. Scan QR code when prompted
 6. Let the bot handle your countdown! 🎉
+
+## 📸 Demo
+
+The bot will:
+- Change group name from "Friends" → "Friends - 16 Days Left!!"
+- Send message: "Helloo Guys! 16 more days to gooooo!!"
+- Update daily at your specified time
 
 ---
 
