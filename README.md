@@ -44,7 +44,7 @@ pip install selenium
    - Ensure it's executable: `chmod +x chromedriver` (macOS/Linux)
 
 3. **Configure the bot**:
-   Edit the configuration variables in `imp.py`:
+   Edit the configuration variables in `bot_reminder.py`:
    ```python
    trip_date = datetime(2025, 10, 17)   # Your trip date
    group_name = '"Friends"'             # WhatsApp group name (with quotes)
@@ -141,8 +141,8 @@ Created by [sankrut02](https://github.com/sankrut02)
 
 1. Install dependencies: `pip install selenium`
 2. Download ChromeDriver and place in project directory
-3. Configure your trip date and group name in `imp.py`
-4. Run: `python imp.py`
+3. Configure your trip date and group name in `bot_reminder.py`
+4. Run: `python bot_reminder.py`
 5. Scan QR code when prompted
 6. Let the bot handle your countdown! 🎉
 
